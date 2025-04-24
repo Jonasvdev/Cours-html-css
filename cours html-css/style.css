@@ -1,0 +1,424 @@
+:root{
+   --color: rgb(64, 92, 129);
+   --color2:#806732 ;
+   --color3:#393b4b;
+   --color4:pink ;
+}
+
+
+
+body{
+    background-color: rgb(208, 211, 216);
+    height: auto;
+    display: grid;
+    margin-left: 3%;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--color2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden ;
+
+}
+.card{
+    background-color: rgba(237, 239, 240, 0.973);
+    width: calc(100% - 50px);
+    padding: 20px 20px 6%;
+    box-shadow: 6px 11px 0px rgb(240, 197, 9);
+    border-radius: 5px;
+    backdrop-filter: rgb(1, 1, 2);
+    top: 0%;
+
+
+}
+
+
+
+label{
+    border-bottom-left-radius: 10;
+
+}
+
+h1{
+    margin-bottom: 24px;
+    /* background-color: rgb(12, 12, 12); */
+    color: brown;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: 15%;
+    position: relative;
+    
+}
+
+h1 ::after{
+    content:"";
+    position: absolute;
+    background: var(--color2);
+    width: 100px;
+    height: 1px;
+    bottom: -14px;
+    left: 50%;
+    transform: translate(-50%) scaleX(0);
+    animation: h1anim 10s ease-in-out forwards;
+    transform-origin: left;
+
+
+}
+@keyframes h1anim { 
+     to {
+        transform: translate(-50%) scale(1);
+
+     }
+
+}
+
+.card:before {
+    content: "\2606" "\2606" "\2606" "\2606\2606";
+    position: absolute;
+    top: 17%;
+    right: 20px;
+    color: hsl(41, 98%, 52%);
+    font-size: 2rem;
+
+    
+
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.polygon{
+        width: 100px;
+        height: 150px;
+        background-color: rgb(238, 201, 79);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        top: 14%;
+        background: linear-gradient(150deg, yellow 10% , red 100%)
+
+
+
+}
+.polygon-container {
+    filter: drop-shadow(yellow);
+   place-self: center;
+
+}
+
+.polygon:after {
+    content: "un texte";
+    position : absolute; 
+    color:var(--color3);
+    background: rgb(7, 45, 128);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50 ,-50%) rotate(345deg);
+    width: 90px;
+    padding: center;
+    
+}
+                                                                                                                                                            
+p{
+    line-height: 20px;
+    margin: 20px , 0px;
+    display: -webkit-box;
+    --webkit-box-orient:vertical;
+    --webkit-line-champ:4;
+    overflow: hidden;
+
+}
+p ::selection {
+
+    background: yellow;
+    color: yellow;
+}
+
+.checkbox-container {
+    display:flex;
+    justify-content: space-around;
+    margin: 20px 0 30px ;
+  perspective: 40px;            /* perspective:  parent; */
+   
+
+
+
+}
+
+
+input[type="checkbox"] {
+    /* display: none; */
+    
+
+}
+
+input[type="checkbox"] :checked + label{
+    display: flex 1 1 auto; 
+    background: rgb(23, 55, 161);
+    color: rgb(32, 12, 214);
+    border-radius: 10%;
+    transform: scale(1.5%);
+    filter: brightness(120%);
+
+}
+.email {
+
+    text-align: center;
+    margin-bottom: 20px;
+}
+    
+
+
+
+label{
+    cursor: pointer;
+    border: 1px solid var(--color2);
+    padding: 5px;
+    border-radius: 5px;
+    background: rgb(64, 199, 188);
+    transition: 0.2s;
+    user-select: none;
+
+}
+
+label :first-of-type:hover{
+    animation: label1 1s infinite linear;
+}
+
+@keyframes label1 {
+    50%{
+        transform: scale(1.4)
+    }
+    100% {
+        transform: scale(0);
+    }
+
+    /* Animation 3D
+     */
+}
+label :nth-child(4) :hover{
+       animation: label2 3s infinite linear;
+}
+
+/* A ne pas oublier la perspective sur le parent */
+
+@keyframes label2 {
+    33% {
+        transform: translateZ(30px);
+    }
+
+    66%{
+     transform: translateZ(-40px);   
+    }
+    100%{
+        transform: translateZ(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+.email input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid tran;
+    outline: none solid transparent;
+    font-size: 1.rem;
+    color: blue;
+    text-align: center;
+    transition: 0.3s;
+    
+    max-width: 300px;
+    width: 35%;
+    min-width:180px ;
+    width: 35px;
+    max-width: 300px;
+
+}
+
+.button{
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+input[type="text"] :focus{
+    background: transparent;
+    border: 3px solid var(--color);
+    border-radius: 3px;
+}
+input[type="text"] ::placeholder{
+    color: var(--color2);
+    font-family: "gill sans", "Gill sans MT", "Trebuchet MS" , sans-serif;
+
+
+}
+button{
+    cursor: pointer;
+    background:var(--color2) ;
+    padding: 10px, 20px;
+    border-radius: 150px;
+    font-size: 1.3rem;
+    border: none;
+    margin: 0 auto;
+    display: block;
+    transition: 1.1rem;
+}
+button :hover{
+    letter-spacing: 3px;
+    transition: 3px;
+
+
+}
+button :hover + a, a :hover {
+
+    opacity: 1;
+   transform: translate(0);
+}
+button :active{
+    transform: scale(1.2);
+    background: yellow;
+    visibility: visible;
+
+}
+
+
+a{
+    color: blue;
+
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    opacity: 0.4px;
+    transform: translateY(0px);
+    transition: 0.3s;
+    visibility: hidden;
+
+}
+
+a :visited{
+    color: red;
+
+}
+img{
+    height: 40px;
+    position: absolute ;
+    filter:  drop-shadow(0px 6px 3px rgba);
+    z-index: 5;
+    animation: spaceship 60s infinite linear;
+
+}
+
+@keyframes spaceship {
+  0% {
+    top: 2%;
+    left: 2%;
+    transform: rotate(90deg);
+  }
+  10%{
+    top: 6%;
+    left: 30%;
+    transform: rotate(90deg);
+  }
+  20% {
+    top: 9%;
+    left: 60%;
+    transform: rotate(60deg);
+  }
+
+  30%{
+    top: 0%;
+    left: 80%;
+    transform: rotate(90deg);
+  }
+
+  40%{
+
+    top: 20%;
+    left: 120%;
+    transform: rotate(110deg);
+  }
+
+  50%{
+
+    top: 50%;
+    left: 80%;
+    transform: rotate(323deg);
+  }
+  60%{
+
+    top: 90%;
+    left: 90%;
+    transform: rotate(256deg);
+  }
+
+  70%{
+
+    top: 110%;
+    left: 15%;
+    transform: rotate(237deg);
+  }
+
+  80%{
+
+    top: 85%;
+    left: 30%;
+    transform: rotate(323deg);
+  }
+
+  90%{
+
+    top: 50%;
+    left: 15%;
+    transform: rotate(350deg);
+  }
+  100%{
+
+    top: 2%;
+    left: 2%;
+    transform: rotate();
+  }
+  }
+  
+
+
+
+
+
+
+  
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
